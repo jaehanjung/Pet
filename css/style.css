@@ -1,0 +1,178 @@
+/* 모바일버전  */
+@media (max-width: 768px) {
+
+    /* 모바일 공통 class */
+    .m_none {
+        display: none !important;
+    }
+
+    .m_block {
+        display: block !important;
+    }
+
+
+
+    /* 모바일 폰트 사이즈 */
+    .mf_10 {
+        font-size: 10px !important;
+    }
+
+    .mf_11 {
+        font-size: 11px !important;
+    }
+
+    .mf_12 {
+        font-size: 12px !important;
+    }
+
+    .mf_13 {
+        font-size: 13px !important;
+    }
+
+    .mf_14 {
+        font-size: 14px !important;
+    }
+
+    .mf_15 {
+        font-size: 15px !important;
+    }
+
+    .mf_17 {
+        font-size: 17px !important;
+    }
+
+    .mf_28 {
+        font-size: 28px !important;
+    }
+
+    /* 모바일 width */
+    .mw_5 {
+        width: 5%;
+    }
+
+    .mw_8 {
+        width: 8%;
+    }
+
+    .mw_10 {
+        width: 10%;
+    }
+
+    .mw_11 {
+        width: 11%;
+    }
+
+    .mw_12 {
+        width: 12%;
+    }
+
+    .mw_13 {
+        width: 13% !important;
+    }
+
+    .mw_14 {
+        width: 14% !important;
+    }
+
+    .mw_15 {
+        width: 15%;
+    }
+
+    .mw_16 {
+        width: 16%;
+    }
+
+    .mw_17 {
+        width: 17% !important;
+    }
+
+    .mw_19 {
+        width: 19% !important;
+    }
+
+    .mw_20 {
+        width: 20%;
+    }
+
+    .mw_22 {
+        width: 22%;
+    }
+
+    .mw_23 {
+        width: 23%;
+    }
+
+    .mw_24 {
+        width: 24% !important;
+    }
+
+    .mw_25 {
+        width: 25%;
+    }
+
+    .mw_30 {
+        width: 30%;
+    }
+
+    .mw_31 {
+        width: 31%;
+    }
+
+    .mw_33 {
+        width: 33%;
+    }
+
+    .mw_35 {
+        width: 35%;
+    }
+
+    .mw_40 {
+        width: 40%;
+    }
+
+    .mw_45 {
+        width: 45%;
+    }
+
+    .mw_50 {
+        width: 50%;
+    }
+
+    .mw_55 {
+        width: 55%;
+    }
+
+    .mw_60 {
+        width: 60%;
+    }
+
+    .mw_65 {
+        width: 65%;
+    }
+
+    .mw_70 {
+        width: 70%;
+    }
+
+    .mw_75 {
+        width: 75%;
+    }
+
+    .mw_80 {
+        width: 80%;
+    }
+
+    .mw_90 {
+        width: 90%;
+    }
+
+    .mw_100 {
+        width: 100%;
+    }
+
+    .main_title {
+        margin: 0px 0px 10px 0px;
+    }
+
+
+}
