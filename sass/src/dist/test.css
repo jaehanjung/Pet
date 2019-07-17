@@ -1,0 +1,25 @@
+body {
+  background: yellowgreen;
+}
+
+.demo {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.demo svg {
+  width: 400px;
+  height: auto;
+}
+
+.icon-hambeger>* {
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 10px;
+  stroke: #fff;
+}
+
+/*# sourceMappingURL=test.css.map */

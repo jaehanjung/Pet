@@ -1,12 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0user-scalable=none;">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+        google.charts.load('current', {
+            'packages': ['corechart']
+        });
+        google.charts.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+            // Create the data table.
+            var data = new google.visualization.DataTable();
+            data.addColumn('string', 'Topping');
+            data.addColumn('number', 'Slices');
+            data.addRows([
+                ['버섯', 2],
+                ['Onions', 1],
+                ['Olives', 1],
+                ['Zucchini', 1],
+                ['Pepperoni', 2]
+            ]);
+
+            // Set chart options
+            var options = {
+                'title': 'How Much Pizza I Ate Last Night',
+                'width': 400,
+                'height': 300
+            };
+
+            // Instantiate and draw our chart, passing in some options.
+            var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
+            chart.draw(data, options);
+        }
+    </script>
 </head>
+
 <body>
-    
+    <div id="wrap">
+        <div class="container">
+            <header>
+                <ul class="lnb_h">
+                    <li>
+                        <a class="menu1" href="#">메뉴1</a>
+                        <ul class="sub sub1">
+                            <li><a href="#">메뉴1-1</a></li>
+                            <li><a href="#">메뉴1-2</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="menu2" href="#">메뉴2</a>
+                        <ul class="sub sub2">
+                            <li><a href="#">메뉴2-1</a></li>
+                            <li><a href="#">메뉴2-2</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="menu3" href="#">메뉴3</a>
+                        <ul class="sub sub3">
+                            <li><a href="#">메뉴3-1</a></li>
+                            <li><a href="#">메뉴3-2</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <span class="icon"></span>
+                        <span class="label">item 1</span>
+                    </li>
+                    <li>
+                        <span class="icon"></span>
+                        <span class="label">item 2</span>
+                    </li>
+                    <li>
+                        <span class="icon"></span>
+                        <span class="label">item 3</span>
+                    </li>
+                    <li>
+                        <span class="icon"></span>
+                        <span class="label">item 4</span>
+                    </li>
+                    <li>
+                        <span class="icon"></span>
+                        <span class="label">item 5</span>
+                    </li>
+                </ul>
+            </header>
+            <div id="chart_div"></div>
+        </div>
+    </div>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="/js/index.js">
+    </script>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+
 </body>
+
 </html>

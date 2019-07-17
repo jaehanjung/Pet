@@ -1,178 +1,247 @@
+@charset "utf-8";
+
+
+
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+#wrap {
+    width: 100%;
+    min-height: 100%;
+    overflow: hidden;
+    font-size: 1em;
+    position: relative;
+}
+
+
+
+li {
+    list-style: none;
+}
+
+ul {
+    margin: 0;
+    list-style: none;
+    padding: 0;
+}
+
+p {
+    padding: 0;
+    margin: 0;
+}
+
+dd,
+dl {
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+input[type=checkbox] {
+    cursor: pointer;
+}
+
+/* 링크 스타일 */
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+    color: inherit;
+}
+
+a:hover {
+    text-decoration: none;
+    cursor: pointer;
+    color: inherit;
+}
+
+/* 공통 스타일 */
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+.disable {
+    display: none !important;
+}
+
+.container {
+    max-width: 100%;
+    padding: 0px;
+    margin: 0px;
+    height: 100%;
+    width: 100%;
+}
+
 /* 모바일버전  */
 @media (max-width: 768px) {
-
-    /* 모바일 공통 class */
-    .m_none {
-        display: none !important;
+    .lnb_h {
+        clear: both;
+        width: 100%
     }
 
-    .m_block {
-        display: block !important;
+    .lnb_h:after {
+        display: block;
+        clear: both;
+        content: ''
     }
 
-
-
-    /* 모바일 폰트 사이즈 */
-    .mf_10 {
-        font-size: 10px !important;
+    .lnb_h li {
+        float: left;
+        position: relative;
+        width: 100px;
+        margin-right: 1px
     }
 
-    .mf_11 {
-        font-size: 11px !important;
+    .lnb_h li a {
+        display: block;
+        width: 100px;
+        padding: 5px 0;
+        background: #eee;
+        color: #000;
+        text-align: center;
+        text-decoration: none
     }
 
-    .mf_12 {
-        font-size: 12px !important;
+    .lnb_h li .sub {
+        display: none;
+        /* position: absolute; */
+        top: 25px;
+        left: 35px;
+        width: 500px
     }
 
-    .mf_13 {
-        font-size: 13px !important;
+    .lnb_h li .sub.active {
+        display: block;
     }
 
-    .mf_14 {
-        font-size: 14px !important;
+    .lnb_h li .sub li {
+        width: auto
     }
 
-    .mf_15 {
-        font-size: 15px !important;
+    .lnb_h li .sub li a {
+        width: auto;
+        padding: 5px 20px 5px 0;
+        background: none;
+        color: #666;
+        text-align: left
     }
 
-    .mf_17 {
-        font-size: 17px !important;
+    /* 사진뒤로보이는 애니메이션 */
+    li {
+        position: relative;
+        text-align: center;
+        width: 75px;
+
+        /* Decrease this number to *increase* the 3D effect (and vice versa). */
+        perspective: 250 !important;
     }
 
-    .mf_28 {
-        font-size: 28px !important;
+    .icon {
+        background: url(http://lorempixel.com/50/50/nature/1);
+        display: inline-block;
+        height: 50px;
+        width: 50px;
     }
 
-    /* 모바일 width */
-    .mw_5 {
-        width: 5%;
+    li:nth-of-type(2n+2) .icon {
+        background: url(http://lorempixel.com/50/50/nature/2);
     }
 
-    .mw_8 {
-        width: 8%;
+    li:nth-of-type(2n+3) .icon {
+        background: url(http://lorempixel.com/50/50/nature/3);
     }
 
-    .mw_10 {
-        width: 10%;
+    li:nth-of-type(2n+4) .icon {
+        background: url(http://lorempixel.com/50/50/nature/4);
     }
 
-    .mw_11 {
-        width: 11%;
+    li:nth-of-type(2n+5) .icon {
+        background: url(http://lorempixel.com/50/50/nature/5);
     }
 
-    .mw_12 {
-        width: 12%;
+    .label {
+        left: 20px;
+        position: absolute;
+        top: 17px;
     }
 
-    .mw_13 {
-        width: 13% !important;
+    li:hover .icon,
+    .label {
+        transform: translateZ(-32px) rotateY(180deg);
+        animation-duration: 0.33s;
+        animation-name: rotateOut;
+        animation-timing-function: linear;
+        animation-fill-mode: forwards;
     }
 
-    .mw_14 {
-        width: 14% !important;
+    .icon,
+    li:hover .label {
+        animation-duration: 0.33s;
+        animation-name: rotateIn;
+        animation-timing-function: linear;
+        animation-fill-mode: forwards;
     }
 
-    .mw_15 {
-        width: 15%;
+    .slow .icon,
+    .slow .label,
+    .slow li:hover .icon,
+    .slow li:hover .label {
+        animation-duration: 2s;
     }
 
-    .mw_16 {
-        width: 16%;
+    @keyframes rotateIn {
+        0% {
+            opacity: 0;
+            transform: translateZ(-100px) translateX(0) rotateY(180deg);
+        }
+
+        1% {
+            transform: translateZ(-100px) rotateY(-180deg);
+        }
+
+        50% {
+            opacity: 0.5;
+            z-index: 1;
+            transform: translateZ(-50px) translateX(-25px) rotateY(-90deg);
+        }
+
+        100% {
+            opacity: 1;
+            z-index: 1;
+            transform: translateZ(0) translateX(0) rotateY(0deg);
+        }
     }
 
-    .mw_17 {
-        width: 17% !important;
+    @keyframes rotateOut {
+        0% {
+            opacity: 1;
+            transform: translateZ(0) translateX(0) rotateY(0deg);
+        }
+
+        50% {
+            opacity: 0.5;
+            z-index: 0;
+            transform: translateZ(-50px) translateX(25px) rotateY(90deg);
+        }
+
+        100% {
+            opacity: 0;
+            z-index: 0;
+            transform: translateZ(-100px) translateX(0) rotateY(180deg);
+        }
     }
-
-    .mw_19 {
-        width: 19% !important;
-    }
-
-    .mw_20 {
-        width: 20%;
-    }
-
-    .mw_22 {
-        width: 22%;
-    }
-
-    .mw_23 {
-        width: 23%;
-    }
-
-    .mw_24 {
-        width: 24% !important;
-    }
-
-    .mw_25 {
-        width: 25%;
-    }
-
-    .mw_30 {
-        width: 30%;
-    }
-
-    .mw_31 {
-        width: 31%;
-    }
-
-    .mw_33 {
-        width: 33%;
-    }
-
-    .mw_35 {
-        width: 35%;
-    }
-
-    .mw_40 {
-        width: 40%;
-    }
-
-    .mw_45 {
-        width: 45%;
-    }
-
-    .mw_50 {
-        width: 50%;
-    }
-
-    .mw_55 {
-        width: 55%;
-    }
-
-    .mw_60 {
-        width: 60%;
-    }
-
-    .mw_65 {
-        width: 65%;
-    }
-
-    .mw_70 {
-        width: 70%;
-    }
-
-    .mw_75 {
-        width: 75%;
-    }
-
-    .mw_80 {
-        width: 80%;
-    }
-
-    .mw_90 {
-        width: 90%;
-    }
-
-    .mw_100 {
-        width: 100%;
-    }
-
-    .main_title {
-        margin: 0px 0px 10px 0px;
-    }
-
-
 }
