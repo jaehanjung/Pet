@@ -3,106 +3,310 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0user-scalable=none;">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
-    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/node_modules/swiper/dist/css/swiper.min.css">
     <link rel="stylesheet" href="/css/common.css">
-    <link rel="stylesheet" href="/css/style.css">
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <script type="text/javascript">
-        google.charts.load('current', {
-            'packages': ['corechart']
-        });
-        google.charts.setOnLoadCallback(drawChart);
-
-        function drawChart() {
-            // Create the data table.
-            var data = new google.visualization.DataTable();
-            data.addColumn('string', 'Topping');
-            data.addColumn('number', 'Slices');
-            data.addRows([
-                ['버섯', 2],
-                ['Onions', 1],
-                ['Olives', 1],
-                ['Zucchini', 1],
-                ['Pepperoni', 2]
-            ]);
-
-            // Set chart options
-            var options = {
-                'title': 'How Much Pizza I Ate Last Night',
-                'width': 400,
-                'height': 300
-            };
-
-            // Instantiate and draw our chart, passing in some options.
-            var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
-            chart.draw(data, options);
-        }
-    </script>
+    <link rel="stylesheet" href="/css/top10.css">
 </head>
 
 <body>
     <div id="wrap">
         <div class="container">
-            <header>
-                <ul class="lnb_h">
-                    <li>
-                        <a class="menu1" href="#">메뉴1</a>
-                        <ul class="sub sub1">
-                            <li><a href="#">메뉴1-1</a></li>
-                            <li><a href="#">메뉴1-2</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a class="menu2" href="#">메뉴2</a>
-                        <ul class="sub sub2">
-                            <li><a href="#">메뉴2-1</a></li>
-                            <li><a href="#">메뉴2-2</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a class="menu3" href="#">메뉴3</a>
-                        <ul class="sub sub3">
-                            <li><a href="#">메뉴3-1</a></li>
-                            <li><a href="#">메뉴3-2</a></li>
-                        </ul>
-                    </li>
-                </ul>
-                <ul>
-                    <li>
-                        <span class="icon"></span>
-                        <span class="label">item 1</span>
-                    </li>
-                    <li>
-                        <span class="icon"></span>
-                        <span class="label">item 2</span>
-                    </li>
-                    <li>
-                        <span class="icon"></span>
-                        <span class="label">item 3</span>
-                    </li>
-                    <li>
-                        <span class="icon"></span>
-                        <span class="label">item 4</span>
-                    </li>
-                    <li>
-                        <span class="icon"></span>
-                        <span class="label">item 5</span>
-                    </li>
-                </ul>
-            </header>
-            <div id="chart_div"></div>
+            <div class="section_header">
+                <div class="section_header_info">
+                    <ul>
+                        <li>
+                            <span class="steamed_food">0</span>
+                            <label class="label">찜한 식품</label>
+                        </li>
+                        <li>
+                            <span class="user_img"><img src="/img/top_1.jpg" alt=""></span>
+                            <label class="label">오리진</label>
+                        </li>
+                        <li>
+                            <span class="steamed_food">50</span>
+                            <label class="label">맞춤 추천</label>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="swiper1_box">
+                <div class="swiper-container swiper1 swiper-container-horizontal">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide swiper-slide-prev">
+                            <img src="/img/swiper1.png" alt="">
+                        </div>
+                        <div class="swiper-slide swiper-slide-active">
+                            <img src="/img/swiper2.png" alt="">
+                        </div>
+                        <div class="swiper-slide swiper-slide-next">
+                            <img src="/img/swiper3.png" alt="">
+                        </div>
+                    </div>
+                    <!-- Add Pagination -->
+                    <div class="swiper-pagination swiper-pagination-fraction">
+                        <span class="swiper-pagination-current">3</span> / <span class="swiper-pagination-total">3</span>
+                    </div>
+                    <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+                </div>
+            </div>
+            <div class="swiper-container swiper2">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide swiper2-slide">
+                        <a class="swiper_boxs" href="#">
+                            <div class="swiper_box_top">
+                                <span class="phone_carusel_num">1</span>
+                                <span class="calorie">
+                                    <i class="fas fa-exclamation-triangle calorie_text_orange"></i>
+                                    <span>지방</span>
+                                </span>
+                                <span class="additive_color additive_bgc_gray">
+                                    &nbsp;
+                                </span>
+                            </div>
+                            <div class="phone_img">
+                                <img src="/img/top_1.jpg" alt="" />
+                            </div>
+                            <div class="phone_carusel_menu">
+                                <p class="phone_carusel_title">순살치킨너겟</p>
+                                <span class="phone_carusel_maker">매일</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="swiper-slide swiper2-slide">
+                        <a class="swiper_boxs" href="#">
+                            <div class="swiper_box_top">
+                                <span class="phone_carusel_num">2</span>
+                                <span class="calorie">
+                                    <i class="fas fa-exclamation-triangle calorie_text_rad"></i>
+                                    <span>열량</span>
+                                </span>
+                                <span class="additive_color additive_bgc_darkred">
+                                    &nbsp;
+                                </span>
+                            </div>
+                            <div class="phone_img">
+                                <img src="/img/top_1.jpg" alt="" />
+                            </div>
+                            <div class="phone_carusel_menu">
+                                <p class="phone_carusel_title">순살치킨너겟</p>
+                                <span class="phone_carusel_maker">매일</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="swiper-slide swiper2-slide">
+                        <a class="swiper_boxs" href="#">
+                            <div class="swiper_box_top">
+                                <span class="phone_carusel_num">3</span>
+                                <span class="calorie">
+                                    <i class="fas fa-exclamation-triangle calorie_text_rad"></i>
+                                    <span>당</span>
+                                </span>
+                                <span class="additive_color additive_bgc_red">
+                                    &nbsp;
+                                </span>
+                            </div>
+                            <div class="phone_img">
+                                <img src="/img/top_1.jpg" alt="" />
+                            </div>
+                            <div class="phone_carusel_menu">
+                                <p class="phone_carusel_title">순살치킨너겟</p>
+                                <span class="phone_carusel_maker">매일</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="swiper-slide swiper2-slide">
+                        <a class="swiper_boxs" href="#">
+                            <div class="swiper_box_top">
+                                <span class="phone_carusel_num">4</span>
+                                <span class="calorie">
+                                    <i class="fas fa-exclamation-triangle text-orange"></i>
+                                    <span>열량</span>
+                                </span>
+                                <span class="additive_color additive_bgc_yellow">
+                                    &nbsp;
+                                </span>
+                            </div>
+                            <div class="phone_img">
+                                <img src="/img/top_1.jpg" alt="" />
+                            </div>
+                            <div class="phone_carusel_menu">
+                                <p class="phone_carusel_title">순살치킨너겟</p>
+                                <span class="phone_carusel_maker">매일</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="swiper-slide swiper2-slide">
+                        <a class="swiper_boxs" href="#">
+                            <div class="swiper_box_top">
+                                <span class="phone_carusel_num">5</span>
+                                <span class="calorie">
+                                    <i class="fas fa-exclamation-triangle calorie_text_orange"></i>
+                                    <span>지방</span>
+                                </span>
+                                <span class="additive_color additive_bgc_gray">
+                                    &nbsp;
+                                </span>
+                            </div>
+                            <div class="phone_img">
+                                <img src="/img/top_1.jpg" alt="" />
+                            </div>
+                            <div class="phone_carusel_menu">
+                                <p class="phone_carusel_title">순살치킨너겟</p>
+                                <span class="phone_carusel_maker">매일</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="swiper-slide swiper2-slide">
+                        <a class="swiper_boxs" href="#">
+                            <div class="swiper_box_top">
+                                <span class="phone_carusel_num">6</span>
+                                <span class="calorie">
+                                    <i class="fas fa-exclamation-triangle calorie_text_rad"></i>
+                                    <span>열량</span>
+                                </span>
+                                <span class="additive_color additive_bgc_darkred">
+                                    &nbsp;
+                                </span>
+                            </div>
+                            <div class="phone_img">
+                                <img src="/img/top_1.jpg" alt="" />
+                            </div>
+                            <div class="phone_carusel_menu">
+                                <p class="phone_carusel_title">순살치킨너겟</p>
+                                <span class="phone_carusel_maker">매일</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="swiper-slide swiper2-slide">
+                        <a class="swiper_boxs" href="#">
+                            <div class="swiper_box_top">
+                                <span class="phone_carusel_num">7</span>
+                                <span class="calorie">
+                                    <i class="fas fa-exclamation-triangle calorie_text_rad"></i>
+                                    <span>당</span>
+                                </span>
+                                <span class="additive_color additive_bgc_red">
+                                    &nbsp;
+                                </span>
+                            </div>
+                            <div class="phone_img">
+                                <img src="/img/top_1.jpg" alt="" />
+                            </div>
+                            <div class="phone_carusel_menu">
+                                <p class="phone_carusel_title">순살치킨너겟</p>
+                                <span class="phone_carusel_maker">매일</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="swiper-slide swiper2-slide">
+                        <a class="swiper_boxs" href="#">
+                            <div class="swiper_box_top">
+                                <span class="phone_carusel_num">8</span>
+                                <span class="calorie">
+                                    <i class="fas fa-exclamation-triangle text-orange"></i>
+                                    <span>열량</span>
+                                </span>
+                                <span class="additive_color additive_bgc_yellow">
+                                    &nbsp;
+                                </span>
+                            </div>
+                            <div class="phone_img">
+                                <img src="/img/top_1.jpg" alt="" />
+                            </div>
+                            <div class="phone_carusel_menu">
+                                <p class="phone_carusel_title">순살치킨너겟</p>
+                                <span class="phone_carusel_maker">매일</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="swiper-slide swiper2-slide">
+                        <a class="swiper_boxs" href="#">
+                            <div class="swiper_box_top">
+                                <span class="phone_carusel_num">9</span>
+                                <span class="calorie">
+                                    <i class="fas fa-exclamation-triangle calorie_text_rad"></i>
+                                    <span>당</span>
+                                </span>
+                                <span class="additive_color additive_bgc_red">
+                                    &nbsp;
+                                </span>
+                            </div>
+                            <div class="phone_img">
+                                <img src="/img/top_1.jpg" alt="" />
+                            </div>
+                            <div class="phone_carusel_menu">
+                                <p class="phone_carusel_title">순살치킨너겟</p>
+                                <span class="phone_carusel_maker">매일</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="swiper-slide swiper2-slide">
+                        <a class="swiper_boxs" href="#">
+                            <div class="swiper_box_top">
+                                <span class="phone_carusel_num">10</span>
+                                <span class="calorie">
+                                    <i class="fas fa-exclamation-triangle text-orange"></i>
+                                    <span>열량</span>
+                                </span>
+                                <span class="additive_color additive_bgc_yellow">
+                                    &nbsp;
+                                </span>
+                            </div>
+                            <div class="phone_img">
+                                <img src="/img/top_1.jpg" alt="" />
+                            </div>
+                            <div class="phone_carusel_menu">
+                                <p class="phone_carusel_title">순살치킨너겟</p>
+                                <span class="phone_carusel_maker">매일</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <script src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="/js/index.js">
+    <script src="/node_modules/swiper/dist/js/swiper.min.js"></script>
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".swiper1", {
+            autoplay: {
+                delay: 3000
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                type: "fraction"
+            }
+        });
     </script>
-    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-
+    <script>
+        var swiper = new Swiper(".swiper2", {
+            slidesPerView: 3,
+            spaceBetween: 30,
+            // init: false,
+            breakpoints: {
+                1024: {
+                    slidesPerView: 4,
+                    spaceBetween: 40
+                },
+                768: {
+                    slidesPerView: 3,
+                    spaceBetween: 30
+                },
+                640: {
+                    slidesPerView: 2.2,
+                    spaceBetween: 20
+                },
+                320: {
+                    slidesPerView: 3,
+                    spaceBetween: 10
+                }
+            }
+        });
+    </script>
 </body>
 
 </html>

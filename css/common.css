@@ -60,3 +60,115 @@ a:active,
 a:focus {
     text-decoration: underline
 }
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+#wrap {
+    width: 100%;
+    min-height: 100vh;
+    font-size: 1em;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+li {
+    list-style: none;
+}
+
+ul {
+    margin: 0;
+    list-style: none;
+    padding: 0;
+}
+
+p {
+    padding: 0;
+    margin: 0;
+}
+
+dd,
+dl {
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+input[type=checkbox] {
+    cursor: pointer;
+}
+
+/* 링크 스타일 */
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+    color: inherit;
+}
+
+a:hover {
+    text-decoration: none;
+    cursor: pointer;
+    color: inherit;
+}
+
+/* 공통 스타일 */
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+.disable {
+    display: none !important;
+}
+
+.container {
+    max-width: 100%;
+    padding: 0px;
+    margin: 0px;
+    min-height: 100vh;
+    width: 100%;
+}
+
+.calorie_text_orange {
+    color: orange;
+}
+
+.calorie_text_rad {
+    color: #af3a0b;
+}
+
+.additive_bgc_gray {
+    background-color: rgb(155, 155, 155);
+}
+
+.additive_bgc_darkred {
+    background-color: rgb(99, 27, 28);
+}
+
+.additive_bgc_red {
+    background-color: rgb(216, 0, 23);
+}
+
+.additive_bgc_yellow {
+    background-color: rgb(249, 164, 39);
+}
+
+.additive_bgc_green {
+    background-color: rgb(149, 206, 99);
+}
